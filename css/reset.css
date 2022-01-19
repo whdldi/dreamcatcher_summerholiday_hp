@@ -1,0 +1,19 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+html {font-size: 62.5%;}
+/* 이러면 1.6rem이라했을때 16px으로 편히 볼수있음*/
+li{list-style: none;}
+a{
+     display: block;
+     color:#333;
+     text-decoration: none;
+     letter-spacing: -0.025rem;
+}
+.clearfix::after{
+     content:'';
+     display: block;
+     clear: both;
+}
+img{
+     border: 0;
+}
