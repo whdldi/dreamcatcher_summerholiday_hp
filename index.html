@@ -36,7 +36,7 @@
           <nav>
           <ul class="gnb">
 
-               <li class="lymenu_sub1"><a href="#">Lyrics</a> <!-- 가사 -->
+               <li class="lymenu_sub1"><a href="#ly_anc">Lyrics</a> <!-- 가사 -->
                     <ul class="sub1">
                          <li><a href="#">Because</a></li>
                          <li><a href="#">Airplane</a></li>
@@ -47,7 +47,7 @@
                </li>
 
                <li><!-- MD상품 -->
-                    <a href="#">MD</a>
+                    <a href="#md_anc">MD</a>
                </li>
                
                <a href="#">
@@ -55,7 +55,7 @@
                </a>
                <!-- 중앙 로고 -->
 
-               <li class="memmenu_sub2"><a href="#">Member</a> <!-- 멤버 -->
+               <li class="memmenu_sub2"><a href="#ca_anc">Member</a> <!-- 멤버 -->
                     <ul class="sub2">
                          <li><a href="#">지유 <span class="sm_txt">JiU</span></a></li>
                          <li><a href="#">수아 <span class="sm_txt">Sua</span></a></li>
@@ -68,7 +68,7 @@
                </li>
 
                <li>
-                    <a href="https://www.youtube.com/watch?v=Ebdcc66Pf48">Making Film</a> <!-- 메이킹영상-->
+                    <a href="https://www.youtube.com/watch?v=Ebdcc66Pf48"target="_blank" title="Show Making Film">Making Film</a> <!-- 메이킹영상-->
                </li>
 
                
@@ -87,9 +87,8 @@
 </main>
 <!-- 뮤비 -->
 
-<section class="ly">
+<section class="ly"><p id="ly_anc"></p><!-- oo_anc는 엥커 -->
      <div class="ly_wrap">
-          
           <div class="as1">
                <img src="img/AS1-be.png"/>
                     <div class="ui animated button" tabindex="0">
@@ -144,24 +143,25 @@
 </section>
 <!-- 가사 -->
 
-<section class="md">
+<section class="md"><p id="md_anc"></p>
      <div class="title">
           <img src="img/md_title.png"/>
      </div>
      <div class="wrap">
-          <div class="md_wrap_top">
+          
+          <div onclick="alert('굿즈 샵이 닫혔네요 &#128557\nThe shop is closed &#128557')" class="md_wrap_top">
                <div class="md1">
-                    <a href="#">
-                         <ul>
+                    <a href="#md_anc">
+                         <ul >
                               <li><img src="img/md_1.png"/></li>
                               <li>팔찌 <span class="m_eng"> Bracelet</span></li>
                               <li>24,000 원<span class="price_ori">28,000 원</span></li>
                          </ul>
                     </a>
                </div>
-
+          
                <div class="md2">
-                    <a href="#">
+                    <a href="#md_anc">
                          <ul>
                               <li><img src="img/md_2.png"/></li>
                               <li>파우치 <span class="m_eng"> Pouch</span></li>
@@ -171,7 +171,7 @@
                </div>
 
                <div class="md3">
-                    <a href="#">
+                    <a href="#md_anc">
                          <ul>
                               <li><img src="img/md_3.png"/></li>
                               <li>[네오젠 X 드림캐쳐] 퍼퓸핸드크림<br><span class="m_eng"> HandCream</span></li>
@@ -181,7 +181,7 @@
                </div>
 
                <div class="md4">
-                    <a href="#">
+                    <a href="#md_anc">
                          <ul>
                               <li><img src="img/md_4.png"/></li>
                               <li>[네오젠 X 드림캐쳐] 퍼퓸미스트<br><span class="m_eng"> PerfumeMist</span></li>
@@ -192,9 +192,9 @@
           </div>
           <!-- md_wrap top end -->
 
-          <div class="md_wrap_bot">
+          <div onclick="alert('굿즈 샵이 닫혔네요 &#128557\nThe shop is closed &#128557')" class="md_wrap_bot">
                <div class="md5">
-                    <a href="#">
+                    <a href="#md_anc">
                          <ul>
                               <li><img src="img/md_5.png"/></li>
                               <li>씨리얼 머그&코스터 <span class="m_eng"> Mug&Coster</span></li>
@@ -204,7 +204,7 @@
                </div>
 
                <div class="md6">
-                    <a href="#">
+                    <a href="#md_anc">
                          <ul>
                               <li><img src="img/md_6.png"/></li>
                               <li>아크릴 키링 <span class="m_eng"> Keyring</span></li>
@@ -214,7 +214,7 @@
                </div>
 
                <div class="md7">
-                    <a href="#">
+                    <a href="#md_anc">
                          <ul>
                               <li><img src="img/md_7.png"/></li>
                               <li>후드 <span class="m_eng"> Hoodie</span></li>
@@ -224,7 +224,7 @@
                </div>
 
                <div class="md8">
-                    <a href="#">
+                    <a href="#md_anc">
                          <ul>
                               <li><img src="img/md_8.png"/></li>
                               <li>베개커버 <span class="m_eng"> Pillow Cover</span></li>
@@ -238,7 +238,7 @@
 </section>
 <!-- md -->
 
-<section class="ca">
+<section class="ca"><p id="ca_anc"></p>
      <div class="ca_title">
           <img src="img/member_title.png"/>
      </div>
@@ -333,7 +333,10 @@
 
 <footer>
      <div class="wrap">
-
+          <ul class="dm">
+               <li><img src="img/dmlogo.png" alt="dm_logo"></li>
+               <li>This page is made by a fan. It's not the official page.</li>
+          </ul>
      </div>
 </footer>
 
