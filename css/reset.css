@@ -9,6 +9,9 @@ a{
      text-decoration: none;
      letter-spacing: -0.025rem;
 }
+p{
+     letter-spacing: -0.025rem;
+}
 .clearfix::after{
      content:'';
      display: block;
