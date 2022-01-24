@@ -82,25 +82,41 @@ $(document).ready(function(){
 /* 이하 카드 모달 */
     $(function(){
       // 	이미지 클릭시 해당 이미지 모달
-        $(".jiu").click(function(){
-          $(".modal").fadeIn();
+        $("#jiu,.jiu").click(function(){
+          $(".mo1").fadeIn();
+        });
+        $("#sua,.sua").click(function(){
+          $(".mo2").fadeIn();
+        });
+        $("#siy,.siy").click(function(){
+          $(".mo3").fadeIn();
+        });
+        $("#han,.han").click(function(){
+          $(".mo4").fadeIn();
+        });
+        $("#yu,.yu").click(function(){
+          $(".mo5").fadeIn();
+        });
+        $("#da,.da").click(function(){
+          $(".mo6").fadeIn();
+        });
+        $("#ga,.ga").click(function(){
+          $(".mo7").fadeIn();
         });
         
         //.modal안에 button을 클릭하면 .modal닫기
-        $(".modal button").click(function(){
+        $(".xbtn").click(function(){
+          $(".modal").fadeOut();
+        });
+        // 한번 더 클릭시 닫힘
+        $(".modal").click(function(){
           $(".modal").fadeOut();
         });
         
-        //.modal밖에 클릭시 닫힘
-        $(".modal").click(function (e) {
-          if (e.target.className != "modal") {
-            return false;
-          } else {
-            $(".modal").fadeOut();
-          }
-        });
       });
 
 
+
+      
 
 });
