@@ -357,7 +357,6 @@ section.ca{
 
 
 /* 이하카드 */
-/* 않이 첫줄꺼 호버하면 위로 올라가야되는데 z-index로 어캐 안되나..? */
 .card_flex_wrap {
      display: flex;
      justify-content: center;
@@ -369,11 +368,11 @@ section.ca{
      display: flex;
      justify-content: space-between;
      /* perspective: 1800px; */
-     transition: ease-in-out .5s;
+     transition: ease-in-out .4s;
 }
 .scene .row1 .card:hover {
      z-index: 200;
-     transition: ease-in-out .5s;
+     transition: ease-in-out .4s;
 }
 
 .scene .row2{
@@ -390,7 +389,7 @@ section.ca{
      width: 280px;
      height: 428px;
      cursor: pointer;
-     transition: ease-in-out .5s;
+     transition: ease-in-out .4s;
      transform-style: preserve-3d;
      /* z-index: 0; */
 }
@@ -404,7 +403,7 @@ section.ca{
      z-index: 0;
      -webkit-backface-visibility: hidden;
      backface-visibility: hidden;
-     transition: ease-in-out .5s;
+     transition: ease-in-out .4s;
      text-align: center;
 }
 /* 두번째줄 겹치는 위치 */
@@ -436,7 +435,6 @@ section.ca{
 .row1,
 .row2{
      position: relative;
-     /* z-index: 0; */
 }
 
 

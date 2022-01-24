@@ -16,18 +16,20 @@
 	align-items: center;
 } */
 
-.modal {
+.mo1,.mo2,.mo3,
+.mo4,.mo5,.mo6,.mo7
+{
 	display: none;
 	z-index: 5000;
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
-.modal button {
+.xbtn {
 	position: absolute;
 	top: 3rem;
 	right: 3rem;
@@ -38,8 +40,8 @@
      cursor:pointer;
 }
 
-.modalBox {
-	position: relative;
+.Box {
+	position: fixed;
 	top: 20%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -48,14 +50,13 @@
 	text-align: center;
 }
 
-.modalBox img {
+.Box img {
 	width: 100%;
 }
-
+.sub2 a{cursor:pointer;}
 
 /* 모달부분 */
-/* 문제1 모달클릭하면 최상위로 올라감
-2. 각 멤버별로 2차메뉴랑 카드 고르는 곳에서 설정하면 됨 */
+/* 문제1. 모달클릭하면 최상위로 올라감 (a href="#"때문)*/
 
 
 
@@ -206,7 +207,6 @@ header nav ul.sub2 a::after{
      width: 0;
 }
 /* 2차메뉴 end */
-/* header end */ /* header end */ /* header end */
 
 
 
@@ -214,7 +214,7 @@ header nav ul.sub2 a::after{
 footer{
      background-color: #000;
      width: 100%;
-     height: 120px;
+     height: 170px;
 }
 footer > .wrap{
      margin: 0 auto;
@@ -223,7 +223,11 @@ footer > .wrap{
 }
 footer > .wrap ul{
      margin-top: 50px;
+     line-height: 2.2rem;
 }
 footer > .wrap ul img{
-     margin-bottom: 10px;
+     padding-bottom: 10px;
+}
+footer > .wrap ul li:last-child{
+     font-size: 1.2rem;
 }
