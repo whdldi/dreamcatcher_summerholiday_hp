@@ -1,21 +1,7 @@
 @charset "utf-8";
 
-/* 모달부분 */
 
-/* body {
-	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-} */
-/* 
-.imgList {
-	width: 100%;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-} */
-
+/* 이하 모달 */
 .mo1,.mo2,.mo3,
 .mo4,.mo5,.mo6,.mo7
 {
@@ -55,8 +41,7 @@
 }
 .sub2 a{cursor:pointer;}
 
-/* 모달부분 */
-/* 문제1. 모달클릭하면 최상위로 올라감 (a href="#"때문)*/
+/* 모달 끝 */
 
 
 
@@ -85,12 +70,12 @@ header > .wrap{
 /* 다 펼쳐졌을때 */
 header > .wrap .wrap_in{
      margin: 0 auto;
-     width: 62.5%; /* 1920의 1200px은 62.5% */
+     width: 62.5%; 
 }
 
 header nav ul.gnb{
      display: inline-block;
-     width: 100%; /* 위 62%에 대한 100% */
+     width: 100%;
      text-align: center;
 }
 header .gnb img{
@@ -220,14 +205,19 @@ footer > .wrap{
      margin: 0 auto;
      text-align: center;
      color: #707070;
+     font-size: 1.4rem;
 }
 footer > .wrap ul{
      margin-top: 50px;
-     line-height: 2.2rem;
+     line-height: 2.4rem;
+     font-size: 1.6rem;
 }
 footer > .wrap ul img{
      padding-bottom: 10px;
 }
 footer > .wrap ul li:last-child{
      font-size: 1.2rem;
+}
+footer > .wrap ul li:nth-child(2){
+     font-weight: 500;
 }
