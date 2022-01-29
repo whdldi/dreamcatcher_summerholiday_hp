@@ -5,10 +5,14 @@
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>DC_HOME</title>
-
+     
      <link href="lib/slick/slick.css" rel="stylesheet"/>
      <link href="lib/slick/slick-theme.css" rel="stylesheet"/>
      <!-- 슬릭 슬라이더 -->
+
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <!-- AOS 스크립트 -->
      
      <link rel="stylesheet" type="text/css" href="lib/Semantic-UI-CSS-master/semantic.css">
      <script src="lib/Semantic-UI-CSS-master/semantic.js"></script>
@@ -17,70 +21,97 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer"/>
      <!-- 폰트어썸으로 아이콘. 시멘틱도 이게 있어야 아이콘들감-->
         
-
-     <link href="css/reset.css" rel="stylesheet"/>
+     
      <link href="css/font.css" rel="stylesheet"/>
      <link href="css/common.css" rel="stylesheet"/>
      <!-- header가 공통이라서 common에넣고 lyrics에도 활용 -->
      <link href="css/index.css" rel="stylesheet"/>
+     <link href="css/reset.css" rel="stylesheet"/>
      <!-- sub page들에 들어가는 main과의공통부분(가사페이지) -->
      
+
 </head>
+
+
 
 
 <body>
 
+<!-- 첫 팝업 -->
+<div id="layer_popup" style="visibility: visible;">
+     <img src="https://i.ytimg.com/vi/xNWhi4tUSOE/maxresdefault.jpg">
 
-     <!-- 팝업 될 곳 -->
-		<div class="modal mo1">
-			<button class="xbtn">&times;</button>
-			<div class="Box">
-				<img src="img/1_지유.png">
-			</div>
-		</div>
+     <div class="close">
+         <form name="pop_form">
+             <div id="check"><input type="checkbox" name="chkbox" value="checkbox" style="margin-right:5px;">하루동안
+                 보지 않기 Close for 24 hours.</div>
+             <button id="close"><a href="javascript:closePop();">&times;</a></button>
+         </form>
+     </div>
+ </div>
+ 
+ <script language="Javascript">
+     cookiedata = document.cookie;
+     if (cookiedata.indexOf("maindiv=done") < 0) {
+         document.all['layer_popup'].style.visibility = "visible";
+     } else {
+         document.all['layer_popup'].style.visibility = "hidden";
+     }
+ </script>
+ <!-- 첫 팝업 끝 -->
 
-		<div class="modal mo2">
-			<button class="xbtn">&times;</button>
-			<div class="Box">
-				<img src="img/2_수아.png">
-			</div>
-		</div>
 
-		<div class="modal mo3">
-			<button class="xbtn">&times;</button>
-			<div class="Box">
-				<img src="img/3_시연.png">
-			</div>
-		</div>
 
-		<div class="modal mo4">
-			<button class="xbtn">&times;</button>
-			<div class="Box">
-				<img src="img/4_한동.png">
-			</div>
-		</div>
+<!-- 카드 팝업 될 곳 -->
+     <div class="modal mo1">
+          <button class="xbtn">&times;</button>
+          <div class="Box">
+               <img src="img/1_지유.png">
+          </div>
+     </div>
 
-		<div class="modal mo5">
-			<button class="xbtn">&times;</button>
-			<div class="Box">
-				<img src="img/5_유현.png">
-			</div>
-		</div>
+     <div class="modal mo2">
+          <button class="xbtn">&times;</button>
+          <div class="Box">
+               <img src="img/2_수아.png">
+          </div>
+     </div>
 
-		<div class="modal mo6">
-			<button class="xbtn">&times;</button>
-			<div class="Box">
-				<img src="img/6_다미.png">
-			</div>
-		</div>
+     <div class="modal mo3">
+          <button class="xbtn">&times;</button>
+          <div class="Box">
+               <img src="img/3_시연.png">
+          </div>
+     </div>
 
-		<div class="modal mo7">
-			<button class="xbtn">&times;</button>
-			<div class="Box">
-				<img src="img/7_가현.png">
-			</div>
-		</div>
-     <!-- 팝업 될 곳 --> 
+     <div class="modal mo4">
+          <button class="xbtn">&times;</button>
+          <div class="Box">
+               <img src="img/4_한동.png">
+          </div>
+     </div>
+
+     <div class="modal mo5">
+          <button class="xbtn">&times;</button>
+          <div class="Box">
+               <img src="img/5_유현.png">
+          </div>
+     </div>
+
+     <div class="modal mo6">
+          <button class="xbtn">&times;</button>
+          <div class="Box">
+               <img src="img/6_다미.png">
+          </div>
+     </div>
+
+     <div class="modal mo7">
+          <button class="xbtn">&times;</button>
+          <div class="Box">
+               <img src="img/7_가현.png">
+          </div>
+     </div>
+<!-- 카드 팝업 될 곳 --> 
 
  
 
@@ -105,7 +136,7 @@
                     <a href="#md_anc">MD</a>
                </li>
                
-               <a href="#">
+               <a href="index.html">
                <img class="centerlogo" src="/dreamcatcher_summerholiday_hp/img/logo.png" alt="logo">
                </a>
                <!-- 중앙 로고 -->
@@ -206,7 +237,7 @@
           
           <!-- <div onclick="alert('굿즈 샵이 닫혔네요 &#128557\nThe shop is closed &#128557')" class="md_wrap_top"> -->
           <div class="md_wrap_top">
-               <div class="md1">
+               <div class="md1" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="200">
                     <a href="https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=275896519"target="_blank">
                          <ul >
                               <li><img src="img/md_1.png"/></li>
@@ -216,7 +247,7 @@
                     </a>
                </div>
           
-               <div class="md2">
+               <div class="md2" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="300">
                     <a href="http://www.hottracks.co.kr/ht/record/detail/8803581202205"target="_blank">
                          <ul>
                               <li><img src="img/md_2.png"/></li>
@@ -226,7 +257,7 @@
                     </a>
                </div>
 
-               <div class="md3">
+               <div class="md3" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="400">
                     <a href="http://www.hottracks.co.kr/ht/record/detail/2300186131641"target="_blank">
                          <ul>
                               <li><img src="img/md_3.png"/></li>
@@ -236,7 +267,7 @@
                     </a>
                </div>
 
-               <div class="md4">
+               <div class="md4" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="500">
                     <a href="http://www.hottracks.co.kr/ht/record/detail/2300186131658"target="_blank">
                          <ul>
                               <li><img src="img/md_4.png"/></li>
@@ -249,7 +280,7 @@
           <!-- md_wrap top end -->
 
           <div class="md_wrap_bot">
-               <div class="md5">
+               <div class="md5" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="600">
                     <a href="http://www.hottracks.co.kr/ht/record/detail/8809314514713"target="_blank">
                          <ul>
                               <li><img src="img/md_5.png"/></li>
@@ -259,7 +290,7 @@
                     </a>
                </div>
 
-               <div class="md6">
+               <div class="md6" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="700">
                     <a href="http://www.hottracks.co.kr/ht/record/detail/8809314514720"target="_blank">
                          <ul>
                               <li><img src="img/md_6.png"/></li>
@@ -269,7 +300,7 @@
                     </a>
                </div>
 
-               <div class="md7">
+               <div class="md7" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="800">
                     <a href="https://neogenlab.co.kr/product/%EB%84%A4%EC%98%A4%EC%A0%A0x%EB%93%9C%EB%A6%BC%EC%BA%90%EC%B3%90-%ED%8D%BC%ED%93%B8-%ED%95%B8%EB%93%9C%ED%81%AC%EB%A6%BC/364/category/29/display/1/"target="_blank">
                          <ul>
                               <li><img src="img/md_7.png"/></li>
@@ -279,7 +310,7 @@
                     </a>
                </div>
 
-               <div class="md8">
+               <div class="md8" data-aos="fade-up" data-aos-easing="ease-out-cubic" data-aos-duration="900">
                     <a href="https://neogenlab.co.kr/product/%EB%84%A4%EC%98%A4%EC%A0%A0x%EB%93%9C%EB%A6%BC%EC%BA%90%EC%B3%90-%ED%8D%BC%ED%93%B8-%EB%B0%94%EB%94%94%EB%AF%B8%EC%8A%A4%ED%8A%B8/363/category/29/display/1/"target="_blank">
                          <ul>
                               <li><img src="img/md_8.png"/></li>
@@ -293,7 +324,6 @@
      </div>
 </section>
 <!-- md -->
-
 <section class="ca"><p id="ca_anc"></p>
      <div class="ca_title">
           <img src="img/member_title.png"/>
@@ -303,7 +333,7 @@
           
      <div class="card_flex_wrap">
           <div class="scene">
-               <div class="row1">
+               <div class="row1" data-aos="zoom-out-up" data-aos-easing="ease-out-cubic" data-aos-duration="600"data-aos-anchor-placement="top-bottom">
                     <div class="card jiu">
                          <div class="card__face card__face--front">
                          <img src="img/8_Dc_card_back.png"/>
@@ -345,9 +375,9 @@
                     </div>
                     <!-- card 4 -->
                </div>
-
+              
                <!-- row2 -->
-               <div class="row2">
+               <div class="row2" data-aos="zoom-out-up" data-aos-easing="ease-out-cubic" data-aos-duration="700" data-aos-anchor-placement="top-bottom">
                     <div class="card yu">
                          <div class="card__face card__face--front">
                          <img src="img/8_Dc_card_back.png"/>
@@ -378,7 +408,6 @@
                          </div>
                     </div>
                </div><!-- row2 -->
-               
           </div>
      </div>
 
@@ -399,11 +428,10 @@
 </footer>
 
 
-
-
      
      <script src="js/jquery-3.6.0.min.js"></script>
-     <script src="lib/slick/slick.js"></script>
      <script src="js/script.js"></script>
+     <script src="lib/slick/slick.js"></script>
+
 </body>
 </html>
