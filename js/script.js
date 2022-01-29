@@ -1,4 +1,10 @@
+
 $(document).ready(function(){
+
+
+
+
+
   $(function(){
       $('header nav ul.gnb .lymenu_sub1').hover(function(){
             $('header nav ul.sub1').stop().slideToggle();
@@ -11,7 +17,8 @@ $(document).ready(function(){
     });
     
 });
-     
+
+
 
 
   $(function(){
@@ -63,7 +70,14 @@ $(document).ready(function(){
                ]
              });
      });
-
+     /* AOS */
+  $(function () {
+    AOS.init({
+      duration: 1000,
+      once:true
+    });
+    /* 속도인데 100은빠름 */
+  });
 
       /* 헤더고정 스크롤 했을때 */
       $(function(){
@@ -117,6 +131,49 @@ $(document).ready(function(){
 
 
 
+// /* 24시간 팝업 */
+$(function () {
+  // 쿠키 가져오기
+  var getCookie = function (cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') c = c.substring(1);
+      if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+    }
+    return "";
+  }
+
+  // 24시간 기준 쿠키 설정하기  
+  var setCookie = function (cname, cvalue, exdays) {
+    var todayDate = new Date();
+    todayDate.setTime(todayDate.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    var expires = "expires=" + todayDate.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+  }
+
+  var couponClose = function () {
+    if ($("input[name='chkbox']").is(":checked") == true) {
+      setCookie("close", "Y", 7); //기간( ex. 1은 하루, 7은 일주일)
+    }
+    $("#pop").hide();
+  }
+
+  $(document).ready(function () {
+    var cookiedata = document.cookie;
+    console.log(cookiedata);
+    if (cookiedata.indexOf("close=Y") < 0) {
+      $("#pop").fadeIn();
+    } else {
+      $("#pop").hide();
+    }
+    $("#close").click(function () {
+      couponClose();
+    });
+  });
+});
+//24시간 팝업끝 
       
 
 });
