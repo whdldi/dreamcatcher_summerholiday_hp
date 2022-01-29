@@ -23,45 +23,15 @@
         
      
      <link href="css/font.css" rel="stylesheet"/>
-     <link href="css/common.css" rel="stylesheet"/>
      <!-- header가 공통이라서 common에넣고 lyrics에도 활용 -->
+     <link href="css/common.css" rel="stylesheet"/>
      <link href="css/index.css" rel="stylesheet"/>
      <link href="css/reset.css" rel="stylesheet"/>
      <!-- sub page들에 들어가는 main과의공통부분(가사페이지) -->
-     
-
 </head>
 
 
-
-
 <body>
-
-<!-- 첫 팝업 -->
-<div id="layer_popup" style="visibility: visible;">
-     <img src="https://i.ytimg.com/vi/xNWhi4tUSOE/maxresdefault.jpg">
-
-     <div class="close">
-         <form name="pop_form">
-             <div id="check"><input type="checkbox" name="chkbox" value="checkbox" style="margin-right:5px;">하루동안
-                 보지 않기 Close for 24 hours.</div>
-             <button id="close"><a href="javascript:closePop();">&times;</a></button>
-         </form>
-     </div>
- </div>
- 
- <script language="Javascript">
-     cookiedata = document.cookie;
-     if (cookiedata.indexOf("maindiv=done") < 0) {
-         document.all['layer_popup'].style.visibility = "visible";
-     } else {
-         document.all['layer_popup'].style.visibility = "hidden";
-     }
- </script>
- <!-- 첫 팝업 끝 -->
-
-
-
 <!-- 카드 팝업 될 곳 -->
      <div class="modal mo1">
           <button class="xbtn">&times;</button>
@@ -163,6 +133,8 @@
      </div><!-- wrap_in end -->
 </div><!-- wrap end -->
 </header>
+
+
 
 <main>
      <div class="main_vid">
@@ -427,7 +399,25 @@
      </div>
 </footer>
 
+<!-- 첫 팝업 -->
+<div id="pop" class="pop">
+     <div class="layerBox">
+          <div class="cont">
+               <img src="img/noti_pop.png" alt="notice">
+          </div>
+          <div class="close">
+               <span id="check" class="btnTodayHide">
+                    <input type="checkbox" value="checkbox" name="chkbox" id="chkday" />
+                    <label for="chkday"><a><b>일주일간 보지않기</b> (Close for 7days)</a></label>
+               </span>
 
+               <span id="close" class="btnClose">
+                    <a href="#">&times;</a>
+               </span>
+          </div>
+     </div>
+</div>
+ <!-- 첫 팝업 끝 -->
      
      <script src="js/jquery-3.6.0.min.js"></script>
      <script src="js/script.js"></script>
