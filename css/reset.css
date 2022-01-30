@@ -1,9 +1,8 @@
 @charset "utf-8";
 *{margin:0; padding:0;}
-html {font-size: 62.5%;}
-
-body{
-     min-width: 1920px;
+html, body {
+     font-size: 62.5%;
+     min-width: 1200px;
 }
 
 /* 이러면 1.6rem이라했을때 16px으로 편히 볼수있음*/
