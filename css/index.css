@@ -256,7 +256,7 @@ section.md{
      text-align: center;
 }
 .title img{
-     margin: 170px 0 60px 0;
+     margin: 150px 0 60px 0;
 }
 .md > .wrap{
      margin-top: 20px;
@@ -347,7 +347,7 @@ section.ca{
      text-align: center;
 }
 .ca_title img{
-     margin: 150px 0 80px 0;
+     margin: 130px 0 80px 0;
 }
 
 
@@ -430,9 +430,12 @@ section.ca{
 .row1,
 .row2{
      position: relative;
+     /* z-index: 0; */
 }
-/* ca end */
 
+
+
+/* ca end */
 
 /* 24시간 팝업 *//* 24시간 팝업 */
 .pop {
@@ -518,7 +521,7 @@ input {
 }
 
 header nav .gnb > li{
-     z-index: 000;
+     z-index: 0;
 }
 /* commond에도 있는 애인데, 처음 notice 검은 필터때문에
 z-index만 0으로 바꿔줌 */
