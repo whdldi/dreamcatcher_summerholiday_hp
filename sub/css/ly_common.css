@@ -43,12 +43,10 @@ article {
      width: 100%;
 }
 .yt div iframe{
-     border: .5px solid white;
      box-sizing: border-box;
      position: fixed;
      bottom: 0;
-     right: 0;
-     
+     left: 0;
 }
 
 /* 이하 가사 */

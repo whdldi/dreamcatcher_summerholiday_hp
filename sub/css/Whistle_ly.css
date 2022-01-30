@@ -6,16 +6,16 @@ p {
 }
 
 span.title {
-     color: #192336;
+     color: #173c81;
 }
 
 .yt div iframe {
-     border: .5px solid #192336;
+     border: 1px solid #173c81;
 }
 
 article {
      background-color: #fff;
 }
 span.info::before{
-     background-color: #192336;
+     background-color: #173c81;
 }
